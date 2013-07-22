@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2013 2:24:48 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ams.entity.TblJadwal" table="tbl_jadwal" catalog="ams_db">
+        <id name="idJadwal" type="java.lang.Integer">
+            <column name="id_jadwal" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tblMakul" class="ams.entity.TblMakul" fetch="select">
+            <column name="id_makul" length="15" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tblJurusan" class="ams.entity.TblJurusan" fetch="select">
+            <column name="id_jurusan" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tblRuangan" class="ams.entity.TblRuangan" fetch="select">
+            <column name="id_ruangan" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tblKelas" class="ams.entity.TblKelas" fetch="select">
+            <column name="id_kelas" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tblDosen" class="ams.entity.TblDosen" fetch="select">
+            <column name="id_dosen" not-null="true" />
+        </many-to-one>
+        <property name="hari" type="int">
+            <column name="hari" not-null="true" />
+        </property>
+        <property name="jamMulai" type="time">
+            <column name="jam_mulai" length="8" not-null="true" />
+        </property>
+        <property name="jamSelesai" type="time">
+            <column name="jam_selesai" length="8" not-null="true" />
+        </property>
+        <set name="tblAbsens" inverse="true">
+            <key>
+                <column name="id_jadwal" not-null="true" />
+            </key>
+            <one-to-many class="ams.entity.TblAbsen" />
+        </set>
+    </class>
+</hibernate-mapping>

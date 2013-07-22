@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ams_db</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping resource="ams/entity/TblJurusan.hbm.xml"/>
+    <mapping resource="ams/entity/TblDosen.hbm.xml"/>
+    <mapping resource="ams/entity/TblAbsen.hbm.xml"/>
+    <mapping resource="ams/entity/TblMakul.hbm.xml"/>
+    <mapping resource="ams/entity/TblKelas.hbm.xml"/>
+    <mapping resource="ams/entity/TblUser.hbm.xml"/>
+    <mapping resource="ams/entity/TblJadwal.hbm.xml"/>
+    <mapping resource="ams/entity/TblRuangan.hbm.xml"/>
+    <mapping resource="ams/entity/TblFakultas.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
