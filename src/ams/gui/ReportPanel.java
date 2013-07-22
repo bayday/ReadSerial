@@ -298,13 +298,13 @@ public class ReportPanel extends javax.swing.JPanel {
         if (tglAwal.isEnabled() == true) {
             if (tglAwal.getDate() == null) {
                 er = er + 1;
-                JOptionPane.showMessageDialog(this, "Tanggal Harus Diisi", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Tanggal Kosong", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
         if (tglAkhir.isEnabled() == true) {
             if (tglAkhir.getDate() == null) {
                 er = er + 1;
-                JOptionPane.showMessageDialog(this, "Tanggal Harus Diisi", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Tanggal Kosong", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
         if (er == 0) {
