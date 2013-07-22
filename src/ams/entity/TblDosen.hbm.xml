@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2013 2:24:48 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ams.entity.TblDosen" table="tbl_dosen" catalog="ams_db">
+        <id name="idDosen" type="java.lang.Integer">
+            <column name="id_dosen" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tblJurusan" class="ams.entity.TblJurusan" fetch="select">
+            <column name="id_jurusan" not-null="true" />
+        </many-to-one>
+        <property name="nip" type="string">
+            <column name="nip" length="20" not-null="true" />
+        </property>
+        <property name="namaDosen" type="string">
+            <column name="nama_dosen" not-null="true" />
+        </property>
+        <property name="tempatLahir" type="string">
+            <column name="tempat_lahir" length="30" not-null="true" />
+        </property>
+        <property name="tglLahir" type="date">
+            <column name="tgl_lahir" length="10" not-null="true" />
+        </property>
+        <property name="jenisKelamin" type="string">
+            <column name="jenis_kelamin" not-null="true" />
+        </property>
+        <property name="pendidikan" type="string">
+            <column name="pendidikan" length="10" not-null="true" />
+        </property>
+        <property name="gelar" type="string">
+            <column name="gelar" length="10" not-null="true" />
+        </property>
+        <property name="noKartu" type="string">
+            <column name="no_kartu" length="10" />
+        </property>
+        <set name="tblJadwals" inverse="true">
+            <key>
+                <column name="id_dosen" not-null="true" />
+            </key>
+            <one-to-many class="ams.entity.TblJadwal" />
+        </set>
+    </class>
+</hibernate-mapping>

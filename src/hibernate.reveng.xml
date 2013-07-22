@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="ams_db"/>
+  <table-filter match-name="tbl_jadwal"/>
+  <table-filter match-name="tbl_ruangan"/>
+  <table-filter match-name="tbl_absen"/>
+  <table-filter match-name="tbl_jurusan"/>
+  <table-filter match-name="tbl_user"/>
+  <table-filter match-name="tbl_kelas"/>
+  <table-filter match-name="tbl_dosen"/>
+  <table-filter match-name="tbl_makul"/>
+  <table-filter match-name="tbl_fakultas"/>
+</hibernate-reverse-engineering>
